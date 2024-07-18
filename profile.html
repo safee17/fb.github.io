@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+
+    .header {
+      background-color: #3b5998;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .profile-header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-cover {
+      width: 100%;
+      height: 300px;
+      background-color: #d3d3d3;
+    }
+
+    .profile-picture {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid white;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      background-color: #d3d3d3;
+    }
+
+    .profile-info {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #3b5998;
+      color: white;
+    }
+
+    .tab-content {
+      padding: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1>Facebook</h1>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="profile-header">
+      <div class="profile-cover"></div>
+      <div class="profile-picture">
+        <img src="../images/passport size photo.jpg" style="width: 140px; height: 140px; border-radius: 150px; margin-right: 82px;">
+      </div>
+
+    </div>
+    <div class="profile-info">
+      <h2>Mohamed safeek rahuman.p</h2>
+      <p>1.2M Friends</p>
+      <div class="grid">
+        <button type="submit" class="btn btn-primary btn-block">About</button>
+        <div>
+        <button type="submit" class="btn btn-primary btn-block">Edit Profile</button>
+      </div>
+      </div>
+
+    </div>
+
+    <ul class="nav nav-tabs" id="profileTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts"
+          aria-selected="true">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about"
+          aria-selected="false">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends"
+          aria-selected="false">Friends</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab" aria-controls="photos"
+          aria-selected="false">Photos</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="profileTabContent">
+      <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+        <h3>Posts</h3>
+        <div class="post">
+          <img src="../images/post.jpg"
+        </div>
+         
+      </div>
+      <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+        <h3>About</h3>
+        <p>User's about information will be displayed here.</p>
+      </div>
+      <div class="tab-pane fade" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+        <h3>Friends</h3>
+        <p>User's friends list will be displayed here.</p>
+      </div>
+      <div class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+        <h3>Photos</h3>
+        <p>User's photos will be displayed here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
